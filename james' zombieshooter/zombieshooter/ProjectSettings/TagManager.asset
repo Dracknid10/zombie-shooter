@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player Damge
+  - Enemy Health
+  - Player Health
+  - Enemy Damage
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 3021367817
+    locked: 0
+  - name: PLayer
+    uniqueID: 441915555
+    locked: 0
+  - name: enemies
+    uniqueID: 1501038315
+    locked: 0
+  - name: FX
+    uniqueID: 621850001
+    locked: 0
+  - name: bullets
+    uniqueID: 3025009817
+    locked: 0
+  - name: foreground
+    uniqueID: 3716481831
+    locked: 0
