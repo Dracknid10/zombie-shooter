@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTowardsObject : MonoBehaviour
+public class PoliceMoveTowardsObject : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -13,7 +13,7 @@ public class MoveTowardsObject : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("zombiesPolice").transform;
+
     }
 
     // Update is called once per frame
@@ -23,19 +23,18 @@ public class MoveTowardsObject : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * 0.01f);
         }
-        else
-        {
-
-            target = GameObject.FindGameObjectWithTag("Zombie").transform;
-        }
-      
-
 
     }
-
     public void SetTarget(Transform newTarget)
     {
-        target = newTarget;
+
+        if (true)
+        {
+
+        }
+
+
+        target = GameObject.FindGameObjectWithTag("zombie").transform;
     }
 
 }

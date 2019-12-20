@@ -8,6 +8,7 @@ TagManager:
   - police
   - player
   - combatant
+  - zombiesPolice
   layers:
   - Default
   - TransparentFX
