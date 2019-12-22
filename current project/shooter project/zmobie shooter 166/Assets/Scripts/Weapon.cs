@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     public float FireTime = 0.5f;
     private bool isFiring = false;
 
+    
 
     public int MagSize = 10;
     private int CurrentAmmo;
@@ -45,6 +46,7 @@ public class Weapon : MonoBehaviour
     public void SetFiring()
     {
         isFiring = false;
+        
     }
 
     private void Fire()
@@ -65,6 +67,9 @@ public class Weapon : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
         Invoke("SetFiring", FireTime);
+
+
+        
 
     }
 
@@ -87,7 +92,7 @@ public class Weapon : MonoBehaviour
             isFiring = false;
             isreloading = false;
 
-            AmmoCounter.text = "RELOAD WITH R!";
+            AmmoCounter.text = "RELOAD USING" + " R";
 
             return;
 
@@ -117,14 +122,23 @@ public class Weapon : MonoBehaviour
             {
 
 
-                animator.SetBool("isfiring", true);
+                //animator.SetBool("isfiring", true);
                 Fire();
+                
 
 
             }
 
 
+
         }
+        else
+        {
+            animator.SetBool("isfiring", false);
+           
+        }
+
+        
 
 
         AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
