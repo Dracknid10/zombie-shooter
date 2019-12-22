@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
 
     public int MagSize = 10;
     private int CurrentAmmo;
-    public int ReserveAmmo = 200;
+   
     public float ReloadTime = 1f;
     private bool isreloading = false;
     
@@ -33,11 +33,12 @@ public class Weapon : MonoBehaviour
         CurrentAmmo = MagSize;
 
 
-       
 
 
-        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
-        
+
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
+
+
 
     }
 
@@ -55,7 +56,7 @@ public class Weapon : MonoBehaviour
 
         CurrentAmmo--;
 
-        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
 
         if (GetComponent<AudioSource>() != null)
         {
@@ -68,14 +69,14 @@ public class Weapon : MonoBehaviour
     void Update()
     {
 
-        
 
-        if(Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
+
+        if (Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
         {
             StartCoroutine(Reload());
         }
 
-       
+
 
 
 
@@ -91,10 +92,7 @@ public class Weapon : MonoBehaviour
         {
 
 
-
-
-
-            //StartCoroutine(Reload());
+            StartCoroutine(Reload());
             isFiring = false;
             return;
 
@@ -123,7 +121,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
 
     }
 
@@ -133,51 +131,16 @@ public class Weapon : MonoBehaviour
 
 
 
-        if (CurrentAmmo >= ReserveAmmo)
-        {
 
-            CurrentAmmo = CurrentAmmo + ReserveAmmo;
-            ReserveAmmo = 0;
-
-
-
-
-
-            animator.SetBool("Reloading", true);
-
-            yield return new WaitForSeconds(ReloadTime);
-
-            animator.SetBool("Reloading", false);
-
-
-            isFiring = false;
-
-            isreloading = false;
-
-        }
-
-
-        else
-        {
-
-
-
-
-            ReserveAmmo = ReserveAmmo - CurrentAmmo;
-
-
-
-
+        
 
 
             isreloading = true;
 
 
 
-
-
-
             Debug.Log("Reloading...");
+
             animator.SetBool("Reloading", true);
 
             yield return new WaitForSeconds(ReloadTime);
@@ -193,7 +156,7 @@ public class Weapon : MonoBehaviour
 
 
 
-        }
+        
 
 
 

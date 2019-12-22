@@ -22480,9 +22480,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3749972178380374170, guid: 4e8cb49b19bb6624c847a854e2f3aff5,
     type: 3}
   bulletSpawn: {fileID: 22720669}
-  fireTime: 0.3
-  maxammo: 32
-  reloadtime: 1
+  FireTime: 0.14
+  MagSize: 32
+  ReloadTime: 1
   animator: {fileID: 1986647643}
   AmmoCounter: {fileID: 1695853362}
 --- !u!114 &1986647648
