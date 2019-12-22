@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -19,10 +20,14 @@ public class Weapon : MonoBehaviour
 
     public Animator animator;
 
+    public Text AmmoCounter;
+
 
     private void Start()
     {
         currentammo = maxammo;
+        AmmoCounter.text = "Ammo: " + currentammo.ToString();
+
     }
 
     public void SetFiring()
@@ -38,6 +43,8 @@ public class Weapon : MonoBehaviour
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
         currentammo--;
+
+        AmmoCounter.text = "Ammo: " + currentammo.ToString();
 
         if (GetComponent<AudioSource>() != null)
         {
@@ -65,7 +72,9 @@ public class Weapon : MonoBehaviour
             return;
                
         }
-        
+
+       
+
 
         if (Input.GetMouseButton(0))
         {
@@ -79,6 +88,9 @@ public class Weapon : MonoBehaviour
             
      
         }
+
+        AmmoCounter.text = "Ammo: " + currentammo.ToString();
+
     }
 
 
@@ -94,6 +106,7 @@ public class Weapon : MonoBehaviour
 
         animator.SetBool("Reloading", false);
         currentammo = maxammo;
+        
 
 
         isreloading = false;

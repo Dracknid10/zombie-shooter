@@ -7,15 +7,21 @@ public class GameUI : MonoBehaviour
     public Slider healthBar;
     public Text scoreText;
     public int playerScore = 0;
+    public Text ammo;
+    public int AMMO = 32;
+
+
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
         AddScore.OnSendScore += UpdateScore;
+       
     }
     private void OnDisable()
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
         AddScore.OnSendScore -= UpdateScore;
+        
     }
     private void UpdateHealthBar(int health)
     {
@@ -26,4 +32,7 @@ public class GameUI : MonoBehaviour
         playerScore += theScore;
         scoreText.text = "SCORE: " + playerScore.ToString();
     }
+
+
+
 }
