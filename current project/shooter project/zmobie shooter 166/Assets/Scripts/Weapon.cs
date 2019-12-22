@@ -56,6 +56,11 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.R) && currentammo != 32)
+        {
+            StartCoroutine(Reload());
+        }
+
 
 
 

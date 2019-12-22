@@ -22482,7 +22482,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 22720669}
   fireTime: 0.3
   maxammo: 32
-  reloadtime: 3
+  reloadtime: 1
   animator: {fileID: 1986647643}
   AmmoCounter: {fileID: 1695853362}
 --- !u!114 &1986647648
