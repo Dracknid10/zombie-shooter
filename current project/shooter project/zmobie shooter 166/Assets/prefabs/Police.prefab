@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218013020570776936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.97, y: 12.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25790453, y: 0.05230367}
+  m_Offset: {x: 0.25790453, y: -0.15002942}
   serializedVersion: 2
-  m_Radius: 0.9489976
+  m_Radius: 1.1513307
 --- !u!50 &218013020570776937
 Rigidbody2D:
   serializedVersion: 4
@@ -181,3 +181,4 @@ MonoBehaviour:
   speed: 5
   smoothing: 5
   adjustmentAngle: -270
+  PoliceAnimator: {fileID: 218013020570776943}

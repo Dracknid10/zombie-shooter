@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour
 {
     public Slider healthBar;
+    
     public Text scoreText;
     public int playerScore = 0;
     public Text ammo;
@@ -26,6 +27,7 @@ public class GameUI : MonoBehaviour
     private void UpdateHealthBar(int health)
     {
         healthBar.value = health;
+        
     }
     private void UpdateScore(int theScore)
     {

@@ -150,81 +150,6 @@ Transform:
   m_Father: {fileID: 1986647642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.66899}
---- !u!1001 &123703938
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7294435169375796459, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_Name
-      value: Zombie Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -54.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294435169375796458, guid: 9a3452dbd67de4f4781b93e18ba4462d,
-        type: 3}
-      propertyPath: prefabToSpawn
-      value: 
-      objectReference: {fileID: 924220152727048674, guid: 7706b224469d3be4bb51b721308c3a8e,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9a3452dbd67de4f4781b93e18ba4462d, type: 3}
 --- !u!1 &342021536
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +571,81 @@ MonoBehaviour:
   playerScore: 0
   ammo: {fileID: 0}
   AMMO: 32
+--- !u!1001 &897252076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7294435169375796459, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombie Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796460, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294435169375796458, guid: 9a3452dbd67de4f4781b93e18ba4462d,
+        type: 3}
+      propertyPath: prefabToSpawn
+      value: 
+      objectReference: {fileID: 924220152727048674, guid: 7706b224469d3be4bb51b721308c3a8e,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a3452dbd67de4f4781b93e18ba4462d, type: 3}
 --- !u!1 &992930608
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1044751275
 GameObject:
@@ -5953,7 +5953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -80}
+  m_AnchoredPosition: {x: 110, y: -88.19995}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500294341
@@ -6000,9 +6000,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22259,8 +22259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 91, y: -128.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 190.8, y: -127.12}
+  m_SizeDelta: {x: 359.61, y: 27.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695853362
 MonoBehaviour:
@@ -22295,7 +22295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'AMMO: '
+  m_Text: AMMO OR RELOAD
 --- !u!222 &1695853363
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22387,7 +22387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986647640}
   m_LocalRotation: {x: -0, y: -0, z: -0.99999464, w: 0.0033010626}
-  m_LocalPosition: {x: -45.78, y: -18.71, z: 0}
+  m_LocalPosition: {x: -39.18, y: -17.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22720669}
@@ -22480,7 +22480,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3749972178380374170, guid: 4e8cb49b19bb6624c847a854e2f3aff5,
     type: 3}
   bulletSpawn: {fileID: 22720669}
-  FireTime: 0.14
+  FireTime: 0.2
   MagSize: 32
   ReloadTime: 1
   animator: {fileID: 1986647643}
@@ -22498,6 +22498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  SprintSpeed: 7
 --- !u!114 &1986647649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22522,7 +22523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635120271316236418c7a97b734dac56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
   onDie:
     m_PersistentCalls:
       m_Calls: []

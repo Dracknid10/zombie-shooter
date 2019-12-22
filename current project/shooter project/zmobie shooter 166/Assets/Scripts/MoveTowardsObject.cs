@@ -14,16 +14,40 @@ public class MoveTowardsObject : MonoBehaviour
     public float smoothing = 5.0f;
     public float adjustmentAngle = 0.0f;
 
-
+    public Animator PoliceAnimator;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("zombiesPolice").transform;
+        PoliceAnimator.SetBool("IsWhacking", false);
+        target = GameObject.FindGameObjectWithTag("Zombie").transform;
     }
+
+
+
+
+
+    private void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Zombie")
+        {
+            PoliceAnimator.SetBool("IsWhacking", true);
+        }
+
+    }
+
+
+
+
+
 
     // Update is called once per frame
     void Update()
     {
+
+     
+
+
+
         if (target != null)
         {
 
@@ -64,5 +88,8 @@ public class MoveTowardsObject : MonoBehaviour
     {
         target = newTarget;
     }
+
+  
+
 
 }

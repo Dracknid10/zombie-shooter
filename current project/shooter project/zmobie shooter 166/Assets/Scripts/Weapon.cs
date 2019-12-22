@@ -92,7 +92,7 @@ public class Weapon : MonoBehaviour
             isFiring = false;
             isreloading = false;
 
-            AmmoCounter.text = "RELOAD USING" + " R";
+            AmmoCounter.text = "RELOAD USING, R";
 
             return;
 
