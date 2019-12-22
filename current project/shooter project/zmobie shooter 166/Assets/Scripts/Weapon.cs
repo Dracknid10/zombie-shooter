@@ -9,24 +9,35 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
-    public float fireTime = 0.5f;
+    public float FireTime = 0.5f;
     private bool isFiring = false;
 
 
-    public int maxammo = 10;
-    private int currentammo;
-    public float reloadtime = 1f;
+    public int MagSize = 10;
+    private int CurrentAmmo;
+    public int ReserveAmmo = 200;
+    public float ReloadTime = 1f;
     private bool isreloading = false;
+    
+
+    
 
     public Animator animator;
 
     public Text AmmoCounter;
+    
 
 
     private void Start()
     {
-        currentammo = maxammo;
-        AmmoCounter.text = "Ammo: " + currentammo.ToString();
+        CurrentAmmo = MagSize;
+
+
+       
+
+
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
+        
 
     }
 
@@ -42,25 +53,29 @@ public class Weapon : MonoBehaviour
         
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
-        currentammo--;
+        CurrentAmmo--;
 
-        AmmoCounter.text = "Ammo: " + currentammo.ToString();
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
 
         if (GetComponent<AudioSource>() != null)
         {
             GetComponent<AudioSource>().Play();
         }
-        Invoke("SetFiring", fireTime);
+        Invoke("SetFiring", FireTime);
 
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R) && currentammo != 32)
+
+        
+
+        if(Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
         {
             StartCoroutine(Reload());
         }
 
+       
 
 
 
@@ -68,33 +83,47 @@ public class Weapon : MonoBehaviour
         {
             return;
         }
-  
 
-        if (currentammo <= 0)
+
+
+
+        if (CurrentAmmo <= 0)
         {
-            StartCoroutine(Reload());
+
+
+
+
+
+            //StartCoroutine(Reload());
             isFiring = false;
             return;
-               
+
         }
 
-       
 
-
-        if (Input.GetMouseButton(0))
+        if (CurrentAmmo != 0)
         {
 
-            if (!isFiring)
+
+            
+
+            
+
+            if (Input.GetMouseButton(0))
             {
-                Fire();
-                
+
+                if (!isFiring)
+                {
+                    Fire();
+
+
+                }
+
 
             }
-            
-     
         }
 
-        AmmoCounter.text = "Ammo: " + currentammo.ToString();
+        AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString() + "/ " + ReserveAmmo.ToString();
 
     }
 
@@ -102,19 +131,72 @@ public class Weapon : MonoBehaviour
     IEnumerator Reload()
     {
 
-        isreloading = true;
-
-        Debug.Log("Reloading...");
-        animator.SetBool("Reloading", true);
-
-        yield return new WaitForSeconds(reloadtime);
-
-        animator.SetBool("Reloading", false);
-        currentammo = maxammo;
-        
 
 
-        isreloading = false;
+        if (CurrentAmmo >= ReserveAmmo)
+        {
+
+            CurrentAmmo = CurrentAmmo + ReserveAmmo;
+            ReserveAmmo = 0;
+
+
+
+
+
+            animator.SetBool("Reloading", true);
+
+            yield return new WaitForSeconds(ReloadTime);
+
+            animator.SetBool("Reloading", false);
+
+
+            isFiring = false;
+
+            isreloading = false;
+
+        }
+
+
+        else
+        {
+
+
+
+
+            ReserveAmmo = ReserveAmmo - CurrentAmmo;
+
+
+
+
+
+
+            isreloading = true;
+
+
+
+
+
+
+            Debug.Log("Reloading...");
+            animator.SetBool("Reloading", true);
+
+            yield return new WaitForSeconds(ReloadTime);
+
+            animator.SetBool("Reloading", false);
+
+
+            CurrentAmmo = MagSize;
+
+
+
+            isreloading = false;
+
+
+
+        }
+
+
+
 
     }
 
