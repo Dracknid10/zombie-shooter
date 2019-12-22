@@ -15,17 +15,17 @@ public class Weapon : MonoBehaviour
 
     public int MagSize = 10;
     private int CurrentAmmo;
-   
+
     public float ReloadTime = 1f;
     private bool isreloading = false;
-    
 
-    
+
+
 
     public Animator animator;
 
     public Text AmmoCounter;
-    
+
 
 
     private void Start()
@@ -51,7 +51,9 @@ public class Weapon : MonoBehaviour
     {
 
         isFiring = true;
-        
+
+        animator.SetBool("isfiring", true);
+
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
         CurrentAmmo--;
@@ -77,7 +79,19 @@ public class Weapon : MonoBehaviour
         }
 
 
+        if (CurrentAmmo <= 0)
+        {
 
+            animator.SetBool("isfiring", false);
+            //StartCoroutine(Reload());
+            isFiring = false;
+            isreloading = false;
+
+            AmmoCounter.text = "RELOAD WITH R!";
+
+            return;
+
+        }
 
 
         if (isreloading)
@@ -88,51 +102,43 @@ public class Weapon : MonoBehaviour
 
 
 
-        if (CurrentAmmo <= 0)
+
+
+
+
+
+
+
+
+        if (Input.GetMouseButton(0))
         {
 
-
-            StartCoroutine(Reload());
-            isFiring = false;
-            return;
-
-        }
-
-
-        if (CurrentAmmo != 0)
-        {
-
-
-            
-
-            
-
-            if (Input.GetMouseButton(0))
+            if (!isFiring)
             {
 
-                if (!isFiring)
-                {
-                    Fire();
 
-
-                }
+                animator.SetBool("isfiring", true);
+                Fire();
 
 
             }
+
+
         }
+
 
         AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
 
-    }
-
-
-    IEnumerator Reload()
-    {
 
 
 
+        IEnumerator Reload()
+        {
 
-        
+
+
+
+
 
 
             isreloading = true;
@@ -140,7 +146,7 @@ public class Weapon : MonoBehaviour
 
 
             Debug.Log("Reloading...");
-
+            animator.SetBool("isfiring", false);
             animator.SetBool("Reloading", true);
 
             yield return new WaitForSeconds(ReloadTime);
@@ -156,12 +162,13 @@ public class Weapon : MonoBehaviour
 
 
 
-        
 
 
+
+
+
+        }
 
 
     }
-
-
 }
