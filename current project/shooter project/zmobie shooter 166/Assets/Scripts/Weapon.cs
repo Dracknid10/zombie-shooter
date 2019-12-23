@@ -20,8 +20,8 @@ public class Weapon : MonoBehaviour
     public float ReloadTime = 1f;
     private bool isreloading = false;
 
-
-
+    public AudioSource gunshot;
+    public AudioSource reload;
 
     public Animator animator;
 
@@ -29,11 +29,24 @@ public class Weapon : MonoBehaviour
 
 
 
+    public void Playgunshot()
+    {
+        gunshot.Play();
+    }
+
+
+    public void Playreload()
+    {
+        reload.Play();
+    }
+
+
+
     private void Start()
     {
         CurrentAmmo = MagSize;
 
-
+       
 
 
 
@@ -52,6 +65,7 @@ public class Weapon : MonoBehaviour
     private void Fire()
     {
 
+
         isFiring = true;
 
         animator.SetBool("isfiring", true);
@@ -59,6 +73,9 @@ public class Weapon : MonoBehaviour
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
         CurrentAmmo--;
+
+        Playgunshot();
+        
 
         AmmoCounter.text = "Ammo: " + CurrentAmmo.ToString();
 
@@ -80,7 +97,11 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
         {
+
+            reload.Play();
+
             StartCoroutine(Reload());
+            
         }
 
 
@@ -163,7 +184,11 @@ public class Weapon : MonoBehaviour
             animator.SetBool("isfiring", false);
             animator.SetBool("Reloading", true);
 
+            
+
             yield return new WaitForSeconds(ReloadTime);
+
+            
 
             animator.SetBool("Reloading", false);
 
