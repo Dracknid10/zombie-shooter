@@ -97,7 +97,7 @@ public class Weapon : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
+        if (Input.GetKeyDown(KeyCode.R) && CurrentAmmo != MagSize)
         {
 
             StartCoroutine(Reload());

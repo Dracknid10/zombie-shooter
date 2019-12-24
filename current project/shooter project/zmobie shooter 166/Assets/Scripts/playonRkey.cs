@@ -8,6 +8,7 @@ public class playonRkey : MonoBehaviour
 
     public AudioSource ReloadSFX;
     private int PassAmmo;
+    private int PassMagSize;
 
 
     // Start is called before the first frame update
@@ -30,10 +31,11 @@ public class playonRkey : MonoBehaviour
 
 
        PassAmmo = weapon.CurrentAmmo;
+       PassMagSize = weapon.MagSize;
 
 
 
-        if (Input.GetKeyDown(KeyCode.R) && PassAmmo != 32)
+        if (Input.GetKeyDown(KeyCode.R) && PassAmmo != PassMagSize)
         {
             ReloadSFX.Play();
         }
