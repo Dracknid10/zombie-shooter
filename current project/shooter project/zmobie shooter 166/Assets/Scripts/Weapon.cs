@@ -4,6 +4,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
+
+
 public class Weapon : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,13 +17,13 @@ public class Weapon : MonoBehaviour
     
 
     public int MagSize = 10;
-    private int CurrentAmmo;
+    public int CurrentAmmo;
 
     public float ReloadTime = 1f;
     private bool isreloading = false;
 
     public AudioSource gunshot;
-    public AudioSource reload;
+    //public AudioSource reloadSound;
 
     public Animator animator;
 
@@ -35,10 +37,10 @@ public class Weapon : MonoBehaviour
     }
 
 
-    public void Playreload()
-    {
-        reload.Play();
-    }
+    //public void Playreload()
+    //{
+    //    reloadSound.Play();
+    //}
 
 
 
@@ -98,11 +100,8 @@ public class Weapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && CurrentAmmo != 32)
         {
 
-            reload.Play();
-            Debug.Log("ReloadingSoundPlaying...");          //WHY IS IT NOT PLAYING!
-
             StartCoroutine(Reload());
-            
+            //Playreload();
         }
 
 
@@ -144,7 +143,7 @@ public class Weapon : MonoBehaviour
             {
 
 
-                //animator.SetBool("isfiring", true);
+                
                 Fire();
                 
 
@@ -179,12 +178,17 @@ public class Weapon : MonoBehaviour
 
             isreloading = true;
 
+            
 
+
+
+            Debug.Log("ReloadingSoundPlaying...");
 
             Debug.Log("Reloading...");
             animator.SetBool("isfiring", false);
             animator.SetBool("Reloading", true);
 
+            
             
 
             yield return new WaitForSeconds(ReloadTime);
