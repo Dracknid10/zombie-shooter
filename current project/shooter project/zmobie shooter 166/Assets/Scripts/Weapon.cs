@@ -99,6 +99,7 @@ public class Weapon : MonoBehaviour
         {
 
             reload.Play();
+            Debug.Log("ReloadingSoundPlaying...");          //WHY IS IT NOT PLAYING!
 
             StartCoroutine(Reload());
             
