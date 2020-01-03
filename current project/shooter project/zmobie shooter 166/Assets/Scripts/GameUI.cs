@@ -22,7 +22,8 @@ public class GameUI : MonoBehaviour
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
         AddScore.OnSendScore -= UpdateScore;
-        
+        PlayerPrefs.SetInt("Score", playerScore);
+
     }
     private void UpdateHealthBar(int health)
     {
