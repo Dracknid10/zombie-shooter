@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Zombie
+  - police
+  - player
+  - combatant
+  - zombiesPolice
+  - music
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player damage
+  - Enemy health
+  - walls
+  - player health
+  - enemy damage
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 3671531253
+    locked: 0
+  - name: walls
+    uniqueID: 406029487
+    locked: 0
+  - name: floor decals
+    uniqueID: 2017808565
+    locked: 0
+  - name: player
+    uniqueID: 1139458459
+    locked: 1
+  - name: bullets
+    uniqueID: 4282043465
+    locked: 0
+  - name: enemies Zombies
+    uniqueID: 1249170149
+    locked: 0
+  - name: enemy police
+    uniqueID: 3690994971
+    locked: 0
+  - name: FX
+    uniqueID: 468446929
+    locked: 0
