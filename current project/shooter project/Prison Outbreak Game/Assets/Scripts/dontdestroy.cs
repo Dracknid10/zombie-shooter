@@ -10,13 +10,13 @@ public class dontdestroy : MonoBehaviour
     {
         GameObject[] obj = GameObject.FindGameObjectsWithTag("music");
         if (obj.Length > 1)
-        {
+        
             Destroy(this.gameObject);
-        }
-        else
-        {
+        
+        
+        
             DontDestroyOnLoad(this.gameObject);
-        }
+        
     }
 
 
