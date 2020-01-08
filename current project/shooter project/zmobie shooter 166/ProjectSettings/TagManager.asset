@@ -9,6 +9,7 @@ TagManager:
   - player
   - combatant
   - zombiesPolice
+  - music
   layers:
   - Default
   - TransparentFX
